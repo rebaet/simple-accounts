@@ -26,7 +26,7 @@ code {
   display: flex;
   flex-direction: column;
   min-width: fit-content;
-  padding: 50px 50px 5px 50px;
+  padding: 35px 50px 5px 50px;
   border: solid 2px black;
   border-radius: 10px;
   align-items: center;
@@ -39,26 +39,24 @@ code {
   flex-direction: column;
 }
 
-.inp {
+input {
   border: none;
   height: 30px;
 }
 
-
 button {
   width: 175px;
   font-size: 20px;
-  margin-top: 30px;
-  margin: 25px;
+  margin: 30px 25px 35px 25px;
   padding: 7px;
 }
 
-#blu-btn {
+.blu-btn {
   background-color: #00eeee;
   border: none;
   padding: 10px;
 }
 
-#blu-btn:hover {
+.blu-btn:hover {
   background-color: #00dcdc;
 }

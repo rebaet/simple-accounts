@@ -2,38 +2,41 @@
 <html lang="en">
 <head>
     <link href="../stylesheets/index.css" rel="stylesheet">
-    <script type="text/javascript" src="../index.js"></script>
     <title>Create New Account</title>
 </head>
 <body id="root">
     <div id='box'>
         <div class='field'>
             <p>USERNAME</p>
-                <input class='inp'></input>
+                <input id="new-username"></input>
         </div>
 
         <div class='field'>
             <p>KEYPHRASE</p> 
-                <input class='inp'></input>
+                <input id="new-phrase"></input>
         </div>            
 
         <div class='field'>
             <p>PASSWORD</p> 
-                <input class='inp'></input>
+                <input id="password-1"></input>
         </div>
 
         <div class='field'>
             <p>CONFIRM PASSWORD</p> 
-                <input class='inp'></input>
+                <input id="password-2"></input>
         </div>
 
         <div id="buttondiv">
-            <button id="blu-btn">Create Account</button>
+            <button class="blu-btn" id="save-data">Create Account</button>
 
             <a href="../index.html">
                 <button>Log In</button>
             </a>
         </div>
     </div>
+
+    <script type="text/javascript" src="../index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
+
 </body>
 </html>

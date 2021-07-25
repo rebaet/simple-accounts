@@ -1,0 +1,22 @@
+{
+  "name": "simple-accounts",
+  "version": "1.0.0",
+  "description": "A simple sign-up, sign-in system that stores data in a json/text file and uses hashing to verify passwords.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rubaiye/simple-accounts.git"
+  },
+  "author": "Rubaiyet Masum",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rubaiye/simple-accounts/issues"
+  },
+  "homepage": "https://github.com/rubaiye/simple-accounts#readme",
+  "dependencies": {
+    "js-sha256": "^0.9.0"
+  }
+}
