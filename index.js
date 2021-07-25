@@ -1,5 +1,3 @@
-// const sha256 = node.require('js-sha256')
-
 if (localStorage.getItem("data")) {
   data = JSON.parse(localStorage.getItem("data"));
 } else {
