@@ -4,7 +4,7 @@ if (localStorage.getItem("data")) {
   data = {};
 }
 
-const messageEl = document.getElementById('message')
+const messageEl = document.getElementById("message");
 
 // elements from newaccount.html
 
@@ -27,7 +27,7 @@ const login_btn = document.getElementById("log-in");
 if (create_btn) {
   // id create_btn element found in dom, i.e currently in newaccounts page
   create_btn.addEventListener("click", () => {
-    if (pass1.value === pass2.value) {
+    if (pass1.value === pass2.value && pass1.value.length >= 6) {
       data[nUserName.value] = {
         KeyPhrase: nKeyPhrase.value,
         Password: sha256(pass2.value),
@@ -43,7 +43,10 @@ if (create_btn) {
       nKeyPhrase.value = "";
       pass1.value = "";
       pass2.value = "";
-    } else {
+    } else if (pass1.value === pass2.value && pass1.value.length < 6) {
+      messageEl.innerHTML =
+        "passwords too small, try something longer than 6 charachters";
+    } else if (pass1.value !== pass2.value) {
       messageEl.innerHTML = "passwords do not match";
     }
   });
@@ -56,7 +59,11 @@ if (login_btn) {
   login_btn.addEventListener("click", () => {
     if (UserName.value in data) {
       if (sha256(Password.value) == data[UserName.value]["Password"]) {
-        console.log("logged in successfully");
+        localStorage.setItem("currentUser", UserName.value);
+        localStorage.setItem("currentPass", sha256(Password.value));
+
+        // load the profile page
+        window.location = "./links/profile.html";
       } else {
         messageEl.innerHTML = "wrong password, try again";
       }

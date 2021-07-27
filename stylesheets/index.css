@@ -28,7 +28,7 @@ code {
   display: flex;
   flex-direction: column;
   min-width: fit-content;
-  padding: 0 4em 1.5em 4em;
+  padding: 0 4em 1em 4em;
   border: solid 0.3em #212320;
   border-radius: 0.6em;
 }
@@ -46,8 +46,8 @@ code {
   flex-direction: column;
 }
 
-.field:hover p{
-  color: #ff9933
+.field:hover p {
+  color: #ff9933;
 }
 
 input {
@@ -57,26 +57,31 @@ input {
   background-color: #333432;
 }
 
-.field:hover input{
+.field:hover input {
   background-color: #535452;
 }
 
+#buttondiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 1.5em 1.5em 0.5em 1.5em;
+}
+
 button {
-  width: 8em;
-  font-size: 1.3em;
-  margin: 1.5em 1.5em .5em 1.5em;
-  padding: 0.35em;
-}
-
-.blu-btn {
-  background-color: #ff9933;
   border: none;
-  padding: 0.4em;
+  width: 9em;
+  font-size: 1.3em;
+  padding: 0.4em 0.2em;
+  flex-shrink: inherit;
 }
 
-.blu-btn:hover {
+.ylw-btn {
+  background-color: #ff9933;
+}
+
+.ylw-btn:hover {
   background-color: #ffa64d;
-  padding:0.396em;
 }
 
 .wht-btn:hover {
