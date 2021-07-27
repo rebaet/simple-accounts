@@ -28,9 +28,16 @@ code {
   display: flex;
   flex-direction: column;
   min-width: fit-content;
-  padding: 3em 4em 1em 3em;
+  padding: 0 4em 1.5em 4em;
   border: solid 0.3em #212320;
   border-radius: 0.6em;
+}
+
+#message {
+  color: red;
+  font-stretch: extra-expanded;
+  font-style: italic;
+  text-align: center;
 }
 
 .field {
@@ -39,19 +46,18 @@ code {
   flex-direction: column;
 }
 
-p:hover{
+.field:hover p{
   color: #ff9933
 }
 
 input {
-  padding-top: 0;
   font-size: 1.5em;
   border: none;
   height: 1.3em;
   background-color: #333432;
 }
 
-input:hover {
+.field:hover input{
   background-color: #535452;
 }
 
@@ -71,4 +77,9 @@ button {
 .blu-btn:hover {
   background-color: #ffa64d;
   padding:0.396em;
+}
+
+.wht-btn:hover {
+  color: #ff9933;
+  background: #efefef;
 }
