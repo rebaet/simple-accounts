@@ -1,3 +1,7 @@
+//Display Usermane in page title
+const title = document.getElementById('title')
+title.innerHTML = localStorage.getItem("currentUser")
+
 // Display Username in the banner
 const username_banner = document.getElementById("Username-banner");
 username_banner.innerHTML = localStorage.getItem("currentUser");

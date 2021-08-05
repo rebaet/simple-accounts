@@ -63,6 +63,10 @@ if (login_btn) {
       if (sha256(Password.value) == data[UserName.value]["Password"]) {
         localStorage.setItem("currentPass", sha256(Password.value));
 
+        // clear input fields
+        UserName.value = "";
+        Password.value = "";
+
         // load the profile page
         window.location = "./links/profile.html";
       } else {
