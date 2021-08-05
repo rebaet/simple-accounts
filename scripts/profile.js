@@ -1,4 +1,3 @@
-console.log("heloo");
 // Display Username in the banner
 const username_banner = document.getElementById("Username-banner");
 username_banner.innerHTML = localStorage.getItem("currentUser");

@@ -58,21 +58,25 @@ if (login_btn) {
   // id create_btn element found in dom, i.e currently in newaccounts page
   login_btn.addEventListener("click", () => {
     if (UserName.value in data) {
+      localStorage.setItem("currentUser", UserName.value);
+
       if (sha256(Password.value) == data[UserName.value]["Password"]) {
-        localStorage.setItem("currentUser", UserName.value);
         localStorage.setItem("currentPass", sha256(Password.value));
 
         // load the profile page
         window.location = "./links/profile.html";
       } else {
-        messageEl.innerHTML = "wrong password, try again";
+        messageEl.innerHTML =
+          "wrong password, try again<br><a href='../links/confirmation.html'>forgot password?</a>";
+
+        Password.value = "";
       }
+    } else {
+      messageEl.innerHTML = "account not found";
 
       // clear input fields
       UserName.value = "";
       Password.value = "";
-    } else {
-      messageEl.innerHTML = "account not found";
     }
   });
 }
